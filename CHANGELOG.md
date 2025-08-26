@@ -1,5 +1,43 @@
 # Changelog
 
+## [1.0.0-beta.12](https://github.com/noir-lang/noir/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2025-08-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove `verify_signature_slice` methods from stdlib ([#9597](https://github.com/noir-lang/noir/issues/9597))
+
+### Features
+
+* Keep last loads from predecessors in mem2reg ([#9492](https://github.com/noir-lang/noir/issues/9492)) ([10a597f](https://github.com/noir-lang/noir/commit/10a597f42aca9d2dbb9ab31e9343b0189e879671))
+* **mem2reg:** Address last known value is independent of its aliases ([#9613](https://github.com/noir-lang/noir/issues/9613)) ([92aa75d](https://github.com/noir-lang/noir/commit/92aa75d2fc665a83c8c1b7f9596d2ec09ffdb01c))
+* Remove redundant `enforce_bitshift_rhs_lt_bit_size` ([#9561](https://github.com/noir-lang/noir/issues/9561)) ([80501a8](https://github.com/noir-lang/noir/commit/80501a8fc54f7483b4136c0040afa31e222ee5eb))
+* **ssa_fuzzer:** Embedded curve ops ([#9557](https://github.com/noir-lang/noir/issues/9557)) ([110cb99](https://github.com/noir-lang/noir/commit/110cb99cf0a2b4cb63bac994dfe34cd247d8ffad))
+
+
+### Bug Fixes
+
+* `assert_constant` refactors and fixes from audit ([#9547](https://github.com/noir-lang/noir/issues/9547)) ([d31b724](https://github.com/noir-lang/noir/commit/d31b724246695d0588529f62055d45bc0ed4e817))
+* **acir_gen:** Keep range checks before side effects ([#9340](https://github.com/noir-lang/noir/issues/9340)) ([c7a3cf5](https://github.com/noir-lang/noir/commit/c7a3cf59d83726fe461a0e852cb5f547fc9679e8))
+* Avoid invalid cast in `remove_bit_shifts` ([#9570](https://github.com/noir-lang/noir/issues/9570)) ([854bea9](https://github.com/noir-lang/noir/commit/854bea9dd928acbf2aefbd169b611bd5d108de2b))
+* Bind trait impl func generics to trait func generics during monomorphization ([#9566](https://github.com/noir-lang/noir/issues/9566)) ([66ba28e](https://github.com/noir-lang/noir/commit/66ba28ef33757afecc2d3fd62337117f84344913))
+* Consume correct number of fields when printing references ([#9579](https://github.com/noir-lang/noir/issues/9579)) ([49a3185](https://github.com/noir-lang/noir/commit/49a3185374382ff61eb7537188a09e87db699628))
+* **expand:** Correctly handle nested dereferences ([#9598](https://github.com/noir-lang/noir/issues/9598)) ([cfde6d8](https://github.com/noir-lang/noir/commit/cfde6d80556857f9119b5f61c4ffb9d2ca124ddf))
+* Fix if-else alias in mem2reg ([#9611](https://github.com/noir-lang/noir/issues/9611)) ([f404d69](https://github.com/noir-lang/noir/commit/f404d699f7b0a02eaf59657cc27d7a4282807b89))
+* Incorrect max bit size in `remove_bit_shifts` ([#9585](https://github.com/noir-lang/noir/issues/9585)) ([0b8c415](https://github.com/noir-lang/noir/commit/0b8c415dd67b58e8d335a77bee57004f93c56ead))
+* **inlining:** Do not inline globals and lower them during ACIR gen ([#9626](https://github.com/noir-lang/noir/issues/9626)) ([f435c93](https://github.com/noir-lang/noir/commit/f435c938ca1e1a2ce4449a484cc6d3dae270b3dd))
+* Make inc/dec_rc impure ([#9617](https://github.com/noir-lang/noir/issues/9617)) ([22b5ebd](https://github.com/noir-lang/noir/commit/22b5ebd703d69fe411bc041d39a168e3fc9b0ad4))
+* **mem2reg:** Assume all function reference parameters have an unknown alias set with nested references ([#9632](https://github.com/noir-lang/noir/issues/9632)) ([d4e3c0f](https://github.com/noir-lang/noir/commit/d4e3c0fe920061c9bfa6ca7799e886a85977f734))
+* **mem2reg:** Consider aliases of a loaded address to be loaded from as well ([#9567](https://github.com/noir-lang/noir/issues/9567)) ([b97ccf5](https://github.com/noir-lang/noir/commit/b97ccf5a3cfa00fa00e7de6f7ac354cbf8904a1c))
+* Revert "feat(mem2reg): address last known value is independent of its… ([#9628](https://github.com/noir-lang/noir/issues/9628)) ([d171555](https://github.com/noir-lang/noir/commit/d171555e29ae093ba7f1ce6012a50c8570eb9ffd))
+* **ssa:** Consider `shl` and `shr` to have side effects ([#9580](https://github.com/noir-lang/noir/issues/9580)) ([1f16498](https://github.com/noir-lang/noir/commit/1f164984dea1b53b982e719929589a5a96cb8b18))
+* **ssa:** Do not simplify on lhs being zero for shifts ([#9596](https://github.com/noir-lang/noir/issues/9596)) ([ef436d0](https://github.com/noir-lang/noir/commit/ef436d0f75d2fc439c2423fcd1ecbced386a31ee))
+
+
+### Miscellaneous Chores
+
+* Remove `verify_signature_slice` methods from stdlib ([#9597](https://github.com/noir-lang/noir/issues/9597)) ([8e8ce66](https://github.com/noir-lang/noir/commit/8e8ce66d5d04b6a270b8764a4f3a1f03b23884d4))
+
 ## [1.0.0-beta.11](https://github.com/noir-lang/noir/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2025-08-19)
 
 
